@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>NHL Roadie</title>
+  <!-- styles -->
+  <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/yeti/bootstrap.min.css" rel="stylesheet">
+</head>
+
+  <div class="container" ng-controller="mainController as main">
+    Logged in user: {{ main.currentUser.username }}
+    <div ui-view></div>
+  </div>
+
+  <!-- scripts -->
+  <!-- <script src="//code.jquery.com/jquery-2.2.1.min.js"></script> -->
+  <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+  <script src="./main.js"></script>
+  <script src="./services.js"></script>
+  <script src="./controllers.js"></script>
+
+</body>
+</html>
