@@ -1,37 +1,41 @@
 var arenasPartial = [
   {
-    "image": "",
+    "image": "./images/arenas/Air-Canada-Center.JPG",
     "arena": "Air Canada Centre",
     "location": "Toronto, Ontario",
     "team": "Toronto Maple Leafs",
-    "team-logo":"",
+    "team-logo":"./images/Toronto-maple-leafs.png",
     "capacity": "18,819",
-    "opened": 1999
+    "opened": 1999,
+    "team-id": "mapleleafs"
+
   },
   {
-    "image": "",
+    "image": "./images/arenas/Amalie-Arena.jpg",
     "arena": "Amalie Arena",
     "location": "Tampa, Florida",
     "team": "Tampa Bay Lightning",
-    "team-logo":"",
+    "team-logo":"Tampa-Bay-lightning.png",
     "capacity": "19,092",
-    "opened": 1996
+    "opened": 1996,
+    "team-id": "lightning"
   },
   {
-    "image": "",
+    "image": "./images/arenas/American-Airlines-Center.jpg",
     "arena": "American Airlines Center",
     "location": "Dallas, Texas",
     "team": "Dallas Stars",
-    "team-logo":"",
+    "team-logo":"Dallas-stars.png",
     "capacity": "18,532",
-    "opened": 2001
+    "opened": 2001,
+    "team-id": "stars"
   }
 ]
 
 var arenasRemaining = [
   {
     "image": "",
-    "arena": "*BB&T Center*",
+    "arena": "BB&T Center",
     "location": "Sunrise, Florida",
     "team": "Florida Panthers",
     "capacity": "19,250",
@@ -40,7 +44,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Barclays Center*",
+    "arena": "Barclays Center",
     "location": "Brooklyn, New York",
     "team": "New York Islanders",
     "capacity": "15,795",
@@ -49,7 +53,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Bell Centre*",
+    "arena": "Bell Centre",
     "location": "Montreal, Quebec",
     "team": "Montreal Canadiens",
     "capacity": "21,288",
@@ -58,7 +62,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Bridgestone Arena*",
+    "arena": "Bridgestone Arena",
     "location": "Nashville, Tennessee",
     "team": "Nashville Predators",
     "capacity": "17,113",
@@ -67,7 +71,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Canadian Tire Centre*",
+    "arena": "Canadian Tire Centre",
     "location": "Ottawa, Ontario",
     "team": "Ottawa Senators",
     "capacity": "19,153",
@@ -76,7 +80,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Consol Energy Center*",
+    "arena": "Consol Energy Center",
     "location": "Pittsburgh, Pennsylvania",
     "team": "Pittsburgh Penguins",
     "capacity": "18,387",
@@ -85,7 +89,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*First Niagara Center*",
+    "arena": "First Niagara Center",
     "location": "Buffalo, New York",
     "team": "Buffalo Sabres",
     "capacity": "19,070",
@@ -94,7 +98,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Gila River Arena*",
+    "arena": "Gila River Arena",
     "location": "Glendale, Arizona",
     "team": "Arizona Coyotes",
     "capacity": "17,125",
@@ -103,7 +107,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Honda Center*",
+    "arena": "Honda Center",
     "location": "Anaheim, California",
     "team": "Anaheim Ducks",
     "capacity": "17,174",
@@ -112,7 +116,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Joe Louis Arena*",
+    "arena": "Joe Louis Arena",
     "location": "Detroit, Michigan",
     "team": "Detroit Red Wings",
     "capacity": "20,027",
@@ -121,7 +125,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Madison Square Garden*",
+    "arena": "Madison Square Garden",
     "location": "New York City, New York",
     "team": "New York Rangers",
     "capacity": "18,006",
@@ -130,7 +134,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*MTS Centre*",
+    "arena": "MTS Centre",
     "location": "Winnipeg, Manitoba",
     "team": "Winnipeg Jets",
     "capacity": "15,294",
@@ -139,7 +143,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Nationwide Arena*",
+    "arena": "Nationwide Arena",
     "location": "Columbus, Ohio",
     "team": "Columbus Blue Jackets",
     "capacity": "18,144",
@@ -148,7 +152,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Pepsi Center*",
+    "arena": "Pepsi Center",
     "location": "Denver, Colorado",
     "team": "Colorado Avalanche",
     "capacity": "18,007",
@@ -157,7 +161,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*PNC Arena*",
+    "arena": "PNC Arena",
     "location": "Raleigh, North Carolina",
     "team": "Carolina Hurricanes",
     "capacity": "18,680",
@@ -166,7 +170,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Prudential Center*",
+    "arena": "Prudential Center",
     "location": "Newark, New Jersey",
     "team": "New Jersey Devils",
     "capacity": "17,625",
@@ -175,7 +179,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Rogers Arena*",
+    "arena": "Rogers Arena",
     "location": "Vancouver, British Colombia",
     "team": "Vancouver Canucks",
     "capacity": "18,910",
@@ -184,7 +188,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Rogers Place*",
+    "arena": "Rogers Place",
     "location": "Edmonton, Alberta",
     "team": "Edmonton Oilers",
     "capacity": "18,641",
@@ -193,7 +197,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Scotiabank Saddledome*",
+    "arena": "Scotiabank Saddledome",
     "location": "Calgary, Alberta",
     "team": "Calgary Flames",
     "capacity": "19,289",
@@ -202,7 +206,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*SAP Center*",
+    "arena": "SAP Center",
     "location": "San Jose, California",
     "team": "San Jose Sharks",
     "capacity": "17,562",
@@ -211,7 +215,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Scottrade Center*",
+    "arena": "Scottrade Center",
     "location": "St. Louis, Missouri",
     "team": "St. Louis Blues",
     "capacity": "19,150",
@@ -220,7 +224,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Staples Center*",
+    "arena": "Staples Center",
     "location": "Los Angeles, California",
     "team": "Los Angeles Kings",
     "capacity": "18,230",
@@ -229,7 +233,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*TD Garden*",
+    "arena": "TD Garden",
     "location": "Boston, Massachusetts",
     "team": "Boston Bruins",
     "capacity": "17,565",
@@ -238,7 +242,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*United Center*",
+    "arena": "United Center",
     "location": "Chicago, Illinois",
     "team": "Chicago Blackhawks",
     "capacity": "19,717",
@@ -247,7 +251,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Verizon Center*",
+    "arena": "Verizon Center",
     "location": "Washington, D.C.",
     "team": "Washington Capitals",
     "capacity": "18,506",
@@ -256,7 +260,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Wells Fargo Center*",
+    "arena": "Wells Fargo Center",
     "location": "Philadelphia, Pennsylvania",
     "team": "Philadelphia Flyers",
     "capacity": "19,543",
@@ -265,7 +269,7 @@ var arenasRemaining = [
   },
   {
     "image": "",
-    "arena": "*Xcel Energy Center*",
+    "arena": "Xcel Energy Center",
     "location": "Saint Paul, Minnesota",
     "team": "Minnesota Wild",
     "capacity": "17,954",
