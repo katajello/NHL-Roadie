@@ -12,6 +12,14 @@ var hash = require('bcrypt-nodejs')
 var path = require('path')
 var passport = require('passport')
 var passportConfig = require('./config/passport.js')
+// var Scraper = require('node-scraper')
+var request = require('request')
+var cheerio = require('cheerio')
+
+
+var sampleArenas = [
+  {image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/ACC_on_Bay_St_and_CN_Tower.JPG/240px-ACC_on_Bay_St_and_CN_Tower.JPG", arena: "Air Canada Centre", location: ""}
+]
 
 // mongoose
 mongoose.connect('mongodb://localhost/nhl-roadie', function(err) {
@@ -35,7 +43,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(require('express-session')({
-    secret: 'keyboard cat',
+    secret: 'woootman',
     resave: false,
     saveUninitialized: false
 }))
@@ -49,6 +57,35 @@ app.use('/user/', routes)
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../client', 'index.html'))
 })
+
+// app.get('/scrape-test', function(req, res) {
+//   var url = 'https://en.wikipedia.org/wiki/List_of_National_Hockey_League_arenas'
+//   // var scraper = new Scraper(url);
+//   // scraper.scrape().on('done', function(err, statusCode, content){
+//   //   if (err){
+//   //     console.error(err);
+//   //   }
+//   //   else {
+//   //     console.log(statusCode, content);
+//   //
+//   //
+//   //   }
+//   // });
+//   request(url, function(err, response, body) {
+//
+//     $ = cheerio.load(body)
+//     var arenas = []
+//     $('.wikitable tbody tr').each(function(i, el) {
+//       $(el).children('td').each(function(i, el){
+//         console.log(el.html())
+//       })
+//     })
+//   })
+//
+//
+//   // $ = cheerio.load(content)
+//   // res.json($('.wikitable'))
+// })
 
 // error hndlers
 app.use(function(req, res, next) {

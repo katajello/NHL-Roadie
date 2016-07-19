@@ -1,0 +1,272 @@
+[
+  {
+    "Image": "",
+    "Arena": "*Air Canada Centre*",
+    "Location": "Toronto, Ontario",
+    "Team(s)": "Toronto Maple Leafs",
+    "Capacity": "18,819",
+    "Opened": 1999,
+    "Ref(s)": "[1]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Amalie Arena*",
+    "Location": "Tampa, Florida",
+    "Team(s)": "Tampa Bay Lightning",
+    "Capacity": "19,092",
+    "Opened": 1996,
+    "Ref(s)": "[2]"
+  },
+  {
+    "Image": "",
+    "Arena": "*American Airlines Center*",
+    "Location": "Dallas, Texas",
+    "Team(s)": "Dallas Stars",
+    "Capacity": "18,532",
+    "Opened": 2001,
+    "Ref(s)": "[3]"
+  },
+  {
+    "Image": "",
+    "Arena": "*BB&T Center*",
+    "Location": "Sunrise, Florida",
+    "Team(s)": "Florida Panthers",
+    "Capacity": "19,250",
+    "Opened": 1998,
+    "Ref(s)": "[4]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Barclays Center*",
+    "Location": "Brooklyn, New York",
+    "Team(s)": "New York Islanders",
+    "Capacity": "15,795",
+    "Opened": 2012,
+    "Ref(s)": "[5]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Bell Centre*",
+    "Location": "Montreal, Quebec",
+    "Team(s)": "Montreal Canadiens",
+    "Capacity": "21,288",
+    "Opened": 1996,
+    "Ref(s)": "[6]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Bridgestone Arena*",
+    "Location": "Nashville, Tennessee",
+    "Team(s)": "Nashville Predators",
+    "Capacity": "17,113",
+    "Opened": 1996,
+    "Ref(s)": "[3][7]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Canadian Tire Centre*",
+    "Location": "Ottawa, Ontario",
+    "Team(s)": "Ottawa Senators",
+    "Capacity": "19,153",
+    "Opened": 1996,
+    "Ref(s)": "[8]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Consol Energy Center*",
+    "Location": "Pittsburgh, Pennsylvania",
+    "Team(s)": "Pittsburgh Penguins",
+    "Capacity": "18,387",
+    "Opened": 2010,
+    "Ref(s)": "[9]"
+  },
+  {
+    "Image": "",
+    "Arena": "*First Niagara Center*",
+    "Location": "Buffalo, New York",
+    "Team(s)": "Buffalo Sabres",
+    "Capacity": "19,070",
+    "Opened": 1996,
+    "Ref(s)": "[3]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Gila River Arena*",
+    "Location": "Glendale, Arizona",
+    "Team(s)": "Arizona Coyotes",
+    "Capacity": "17,125",
+    "Opened": 2003,
+    "Ref(s)": "[10]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Honda Center*",
+    "Location": "Anaheim, California",
+    "Team(s)": "Anaheim Ducks",
+    "Capacity": "17,174",
+    "Opened": 1993,
+    "Ref(s)": "[10]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Joe Louis Arena*",
+    "Location": "Detroit, Michigan",
+    "Team(s)": "Detroit Red Wings",
+    "Capacity": "20,027",
+    "Opened": 1979,
+    "Ref(s)": "[11]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Madison Square Garden*",
+    "Location": "New York City, New York",
+    "Team(s)": "New York Rangers",
+    "Capacity": "18,006",
+    "Opened": "1968 †",
+    "Ref(s)": "[12]"
+  },
+  {
+    "Image": "",
+    "Arena": "*MTS Centre*",
+    "Location": "Winnipeg, Manitoba",
+    "Team(s)": "Winnipeg Jets",
+    "Capacity": "15,294",
+    "Opened": 2004,
+    "Ref(s)": ""
+  },
+  {
+    "Image": "",
+    "Arena": "*Nationwide Arena*",
+    "Location": "Columbus, Ohio",
+    "Team(s)": "Columbus Blue Jackets",
+    "Capacity": "18,144",
+    "Opened": 2000,
+    "Ref(s)": "[13]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Pepsi Center*",
+    "Location": "Denver, Colorado",
+    "Team(s)": "Colorado Avalanche",
+    "Capacity": "18,007",
+    "Opened": 1999,
+    "Ref(s)": "[10]"
+  },
+  {
+    "Image": "",
+    "Arena": "*PNC Arena*",
+    "Location": "Raleigh, North Carolina",
+    "Team(s)": "Carolina Hurricanes",
+    "Capacity": "18,680",
+    "Opened": 1999,
+    "Ref(s)": "[14]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Prudential Center*",
+    "Location": "Newark, New Jersey",
+    "Team(s)": "New Jersey Devils",
+    "Capacity": "17,625",
+    "Opened": 2007,
+    "Ref(s)": "[15]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Rogers Arena*",
+    "Location": "Vancouver, British Colombia",
+    "Team(s)": "Vancouver Canucks",
+    "Capacity": "18,910",
+    "Opened": 1995,
+    "Ref(s)": ""
+  },
+  {
+    "Image": "",
+    "Arena": "*Rogers Place*",
+    "Location": "Edmonton, Alberta",
+    "Team(s)": "Edmonton Oilers",
+    "Capacity": "18,641",
+    "Opened": 2016,
+    "Ref(s)": "[16]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Scotiabank Saddledome*",
+    "Location": "Calgary, Alberta",
+    "Team(s)": "Calgary Flames",
+    "Capacity": "19,289",
+    "Opened": 1983,
+    "Ref(s)": "[10]"
+  },
+  {
+    "Image": "",
+    "Arena": "*SAP Center*",
+    "Location": "San Jose, California",
+    "Team(s)": "San Jose Sharks",
+    "Capacity": "17,562",
+    "Opened": 1993,
+    "Ref(s)": "[10]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Scottrade Center*",
+    "Location": "St. Louis, Missouri",
+    "Team(s)": "St. Louis Blues",
+    "Capacity": "19,150",
+    "Opened": 1994,
+    "Ref(s)": "[3]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Staples Center*",
+    "Location": "Los Angeles, California",
+    "Team(s)": "Los Angeles Kings",
+    "Capacity": "18,230",
+    "Opened": 1999,
+    "Ref(s)": "[3]"
+  },
+  {
+    "Image": "",
+    "Arena": "*TD Garden*",
+    "Location": "Boston, Massachusetts",
+    "Team(s)": "Boston Bruins",
+    "Capacity": "17,565",
+    "Opened": 1995,
+    "Ref(s)": "[17]"
+  },
+  {
+    "Image": "",
+    "Arena": "*United Center*",
+    "Location": "Chicago, Illinois",
+    "Team(s)": "Chicago Blackhawks",
+    "Capacity": "19,717",
+    "Opened": 1994,
+    "Ref(s)": "[18]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Verizon Center*",
+    "Location": "Washington, D.C.",
+    "Team(s)": "Washington Capitals",
+    "Capacity": "18,506",
+    "Opened": 1997,
+    "Ref(s)": "[3]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Wells Fargo Center*",
+    "Location": "Philadelphia, Pennsylvania",
+    "Team(s)": "Philadelphia Flyers",
+    "Capacity": "19,543",
+    "Opened": 1996,
+    "Ref(s)": "[3]"
+  },
+  {
+    "Image": "",
+    "Arena": "*Xcel Energy Center*",
+    "Location": "Saint Paul, Minnesota",
+    "Team(s)": "Minnesota Wild",
+    "Capacity": "17,954",
+    "Opened": 2000,
+    "Ref(s)": "[10]2013"
+  }
+]

@@ -26,7 +26,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
     })
     .state('one', {
       url: '/one',
-      template: '<h1>This is page one!</h1>'
+      templateUrl: 'templates/stadium.html',
+      restricted: true
     })
     .state('two', {
       url: '/two',
