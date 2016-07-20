@@ -1,0 +1,25 @@
+<h1>{{arenaCtrl.title}}</h1>
+<a class="btn btn-default" href="/" role="button">home</a>
+<div>
+    Filter Search: <input type="text" ng-model="filterSearch">
+</div>
+Sort By:
+  <select ng-model="arenaOrder">
+      <option value="team">Team</option>
+      <option value="location">Location</option>
+  </select>
+<section class="grid">
+  <div class="column--light">
+    <ol>
+  <li ng-repeat="arena in arenaCtrl.arenas | orderBy: arenaOrder | filter:filterSearch">
+    <img class="img-thumbnail" src="/images/{{arena.teamLogo}}">
+    {{ arena.team }} |
+    {{ arena.location }} |
+    {{ arena.arena }} |
+    <img src="/images/arenas/{{arena.image}}" class="img-thumbnail">
+    <button type="button" name="add" ng-click="arenaCtrl.addArena(arena)">visit</button>
+    <!-- <button type="button" name="add" ng-click="arenaCtrl.addArena({arena:arena, user:main.currentUser})">visit</button> -->
+
+  </li>
+</ol>
+</div>

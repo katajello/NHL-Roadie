@@ -1,16 +1,16 @@
-// user model
+// Arena model
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 
-var Arena = new Schema({
+var arenaSchema = new Schema({
   image: String,
   arena: String,
   location: String,
   team: String,
-  team-logo: String,
-  capacity: Number,
+  teamLogo: String,
+  capacity: String,
   opened: Number,
-  team-id: String
+  teamId: String
 })
 
-module.exports = mongoose.model('arenas', Arena)
+module.exports = mongoose.model('Arena', arenaSchema)

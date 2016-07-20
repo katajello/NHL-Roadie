@@ -3,6 +3,7 @@ var router = express.Router()
 var passport = require('passport')
 
 var User = require('../models/User.js')
+var Arena = require('../models/Arena.js')
 
 router.post('/register', function(req, res) {
   User.register(new User({ username: req.body.username }),
@@ -60,6 +61,13 @@ router.get('/status', function(req, res) {
   res.status(200).json({
     status: true,
     user: req.user
+  })
+})
+
+router.get('/arenas', function(req, res){
+  Arena.find({}, function (err, arenas) {
+    if(err) return console.log(err);
+    res.json(arenas)
   })
 })
 

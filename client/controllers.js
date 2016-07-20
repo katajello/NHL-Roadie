@@ -3,16 +3,35 @@ angular.module('myApp')
   .controller('loginController', loginController)
   .controller('logoutController', logoutController)
   .controller('registerController', registerController)
+  .controller('arenaController', arenaController)
 
 
   mainController.$inject = ['$rootScope', '$state', 'AuthService']
   loginController.$inject = ['$state', 'AuthService']
   logoutController.$inject = ['$state', 'AuthService']
   registerController.$inject = ['$state', 'AuthService']
+  arenaController.$inject = ['$state', 'AuthService', '$http']
 
+
+function arenaController($state, AuthService, $http) {
+  var vm = this
+  vm.title = "the Arena Ctrl"
+    $http.get('/user/arenas')
+    .success(function (arenas) {
+      vm.arenas = arenas
+      console.log(vm.arenas[0]);
+    })
+  vm.addArena = function (arena) {
+    console.log("lets add arena");
+    console.log(arena);
+    // use $http to post arena to user
+    
+  }
+}
 
 function mainController($rootScope, $state, AuthService) {
   var vm = this
+
   $rootScope.$on('$stateChangeStart', function (event) {
     // console.log("Changing states")
     AuthService.getUserStatus()
@@ -36,7 +55,7 @@ function loginController($state, AuthService) {
       // handle success
       .then(function () {
         console.log("Successful login...")
-        $state.go('profile')
+        $state.go('home')
         vm.disabled = false
         vm.loginForm = {}
       })

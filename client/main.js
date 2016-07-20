@@ -24,10 +24,10 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/register.html',
       controller: 'registerController as registerCtrl'
     })
-    .state('one', {
-      url: '/one',
-      templateUrl: 'templates/stadium.html',
-      restricted: true
+    .state('arenas', {
+      url: '/arenas',
+      templateUrl: 'templates/arenas.html',
+      controller: 'arenaController as arenaCtrl'
     })
     .state('two', {
       url: '/two',

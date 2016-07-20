@@ -14,17 +14,16 @@ var passport = require('passport')
 var passportConfig = require('./config/passport.js')
 // var Scraper = require('node-scraper')
 var request = require('request')
-var cheerio = require('cheerio')
+// var cheerio = require('cheerio')
+// var seed = require('../seeds/seeds.js')
 
 
-var sampleArenas = [
-  {image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/ACC_on_Bay_St_and_CN_Tower.JPG/240px-ACC_on_Bay_St_and_CN_Tower.JPG", arena: "Air Canada Centre", location: ""}
-]
 
 // mongoose
 mongoose.connect('mongodb://localhost/nhl-roadie', function(err) {
   if(err) return console.log(err)
   console.log("Connected to MongoDB (NHL-Roadie)")
+  // seed()
 })
 
 // user schema/model
@@ -49,43 +48,15 @@ app.use(require('express-session')({
 }))
 app.use(passport.initialize())
 app.use(passport.session())
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '../client')))
 
 // routes
-app.use('/user/', routes)
+app.use('/user', routes)
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../client', 'index.html'))
 })
 
-// app.get('/scrape-test', function(req, res) {
-//   var url = 'https://en.wikipedia.org/wiki/List_of_National_Hockey_League_arenas'
-//   // var scraper = new Scraper(url);
-//   // scraper.scrape().on('done', function(err, statusCode, content){
-//   //   if (err){
-//   //     console.error(err);
-//   //   }
-//   //   else {
-//   //     console.log(statusCode, content);
-//   //
-//   //
-//   //   }
-//   // });
-//   request(url, function(err, response, body) {
-//
-//     $ = cheerio.load(body)
-//     var arenas = []
-//     $('.wikitable tbody tr').each(function(i, el) {
-//       $(el).children('td').each(function(i, el){
-//         console.log(el.html())
-//       })
-//     })
-//   })
-//
-//
-//   // $ = cheerio.load(content)
-//   // res.json($('.wikitable'))
-// })
 
 // error hndlers
 app.use(function(req, res, next) {
