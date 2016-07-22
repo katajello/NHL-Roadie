@@ -31,11 +31,6 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
       controller: 'arenaController as arenaCtrl',
       restricted: true
     })
-    .state('two', {
-      url: '/two',
-      template: '<h1>This is page two!</h1>',
-      restricted: true
-    })
     .state('profile', {
       url: '/profile',
       templateUrl: 'templates/profile.html',
