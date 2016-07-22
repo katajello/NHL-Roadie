@@ -36,7 +36,7 @@ function arenaController($state, AuthService, $http, $scope) {
   $scope.loadData = function () {
     $http.get('/user/arenas')
     .success(function (arenas) {
-      vm.arenas = arenass
+      vm.arenas = arenas
     })
   }
   $scope.loadData()

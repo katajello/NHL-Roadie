@@ -29,7 +29,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
       url: '/arenas',
       templateUrl: 'templates/arenas.html',
       controller: 'arenaController as arenaCtrl',
-      restricted: false
+      restricted: true
     })
     .state('two', {
       url: '/two',
