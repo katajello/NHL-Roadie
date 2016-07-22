@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var port = process.env.PORT || 3000
-
+var dotenv = require('dotenv').load({silent: true})
 // dependencies
 var express = require('express')
 var logger = require('morgan')
@@ -16,15 +16,15 @@ var passportConfig = require('./config/passport.js')
 var request = require('request')
 // var bootstrap = require('angular-ui-bootstrap')
 // var cheerio = require('cheerio')
-// var seed = require('../seeds/seeds.js')
+var seed = require('../seeds/seeds.js')
 
 
 
 // mongoose
-mongoose.connect('mongodb://localhost/nhl-roadie', function(err) {
+mongoose.connect(process.env.DB_URL, function(err) {
   if(err) return console.log(err)
   console.log("Connected to MongoDB (NHL-Roadie)")
-  // seed()
+  seed()
 })
 
 // user schema/model
