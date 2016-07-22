@@ -31,4 +31,4 @@ I consider myself a large hockey fan and also a fan of travel. This app was buil
 
 
 #### Installation Instructions
-No installation needed, simply visit (site link here) and 
+No installation needed, simply visit [NHL-Roadie](https://nhl-roadie.herokuapp.com/) and register your user name and password. After you are logged in visit the page of Arenas and start adding to your travel wish list!  

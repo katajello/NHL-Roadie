@@ -1,22 +1,21 @@
-<h1>Current User: {{ main.currentUser.username }}</h1>
+<!-- <h1>Current User: {{ main.currentUser.username }}</h1> -->
 
-<div class="row">
-<div class="col-md-6">
-  <h1>Arenas I have visited</h1>
-</div>
-<div class="col-md-6">
-  <h1>Arenas I want to visit</h1>
-  <!-- {{main.currentUser.username}}
-  {{main.currentUser.arenas[1].arena}} -->
-
-  <ul>
-    <li ng-repeat="arena in main.currentUser.arenas">{{arena.location}}</li>
-  </ul>
-</div>
-
-</div>
-
-<div>
-  <a class="btn btn-default" href="/" role="button">Home</a>
-    <a class="btn btn-default" href="#/arenas" role="button">Arenas</a>
-</div>
+Sort By:
+<select ng-model="arenaOrder">
+    <option value="team">Team</option>
+    <option value="location">Location</option>
+    <option value="index">Index</option>
+</select>
+<ol>
+  <div class="arena-lists">
+    <li ng-repeat="arena in main.currentUser.arenas | orderBy: arenaOrder" class="row index">
+      <div class="col-md-2">
+        <img class="img-thumbnail" src="/images/{{arena.teamLogo}}">
+      </div>
+      <div class="col-md-4">
+        <p>{{ arena.team }}</p>
+      </div>
+        <button type="button" ng-click="arenaCtrl.selectArena(arena);main.open()">Open me!</button>
+    </li>
+  </div>
+</ol>

@@ -80,20 +80,16 @@ router.post('/:id/add-arena', function(req, res) {
       user.save(function(err, user) {
         if(err) {res.json({message: "couldn't add arena..."})} else {
           User.populate(user, {path: 'arenas'}, function(err, user) {
-            res.json({message: "arena added", user: user})
+            // res.json({message: "arena added", user: user})
+          })
+          User.find({}).populate('arenas').exec(function (err, user) {
+            if (err) return console.log(err);
+            res.json(user)
           })
         }
       })
     }
   })
-
-  // Arena.findById(req.body.arenaId, function(err, arena) {
-  //   if(arena) {
-  //
-  //   } else { res.json({message: "arena not found :("})}
-  // })
-
-
 
 })
 
