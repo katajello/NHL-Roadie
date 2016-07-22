@@ -6,8 +6,12 @@
 </div>
 <div class="col-md-6">
   <h1>Arenas I want to visit</h1>
-  {{main.currentUser.username}}
-  {{main.currentUser.arenas[1].arena}}
+  <!-- {{main.currentUser.username}}
+  {{main.currentUser.arenas[1].arena}} -->
+
+  <ul>
+    <li ng-repeat="arena in main.currentUser.arenas">{{arena.location}}</li>
+  </ul>
 </div>
 
 </div>

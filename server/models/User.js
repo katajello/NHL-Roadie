@@ -9,7 +9,7 @@ var User = new Schema({
   arenas: [{ type: Schema.Types.ObjectId, ref: 'Arena' }]
 })
 
-User.plugin(passportLocalMongoose)
+User.plugin(passportLocalMongoose, {populateFields: 'arenas'})
 
 
 module.exports = mongoose.model('users', User)
