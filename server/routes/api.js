@@ -71,5 +71,31 @@ router.get('/arenas', function(req, res){
   })
 })
 
+router.post('/:id/add-arena', function(req, res) {
+  console.log(req.body)
+
+  User.findById(req.params.id, function(err, user) {
+    if(err) {res.json({message: "couldn't find user..."})} else {
+      user.arenas.push(req.body.arenaId)
+      user.save(function(err, user) {
+        if(err) {res.json({message: "couldn't add arena..."})} else {
+          User.populate(user, {path: 'arenas'}, function(err, user) {
+            res.json({message: "arena added", user: user})
+          })
+        }
+      })
+    }
+  })
+
+  // Arena.findById(req.body.arenaId, function(err, arena) {
+  //   if(arena) {
+  //
+  //   } else { res.json({message: "arena not found :("})}
+  // })
+
+
+
+})
+
 
 module.exports = router

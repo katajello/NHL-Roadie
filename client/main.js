@@ -1,4 +1,5 @@
-var myApp = angular.module('myApp', ['ui.router'])
+var myApp = angular.module('myApp', ['ui.router', 'ngAnimate', 'ui.bootstrap'])
+
 
 myApp.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -27,7 +28,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
     .state('arenas', {
       url: '/arenas',
       templateUrl: 'templates/arenas.html',
-      controller: 'arenaController as arenaCtrl'
+      controller: 'arenaController as arenaCtrl',
+      restricted: false
     })
     .state('two', {
       url: '/two',

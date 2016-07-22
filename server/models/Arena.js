@@ -10,7 +10,8 @@ var arenaSchema = new Schema({
   teamLogo: String,
   capacity: String,
   opened: Number,
-  teamId: String
+  teamId: String,
+  users: []
 })
 
 module.exports = mongoose.model('Arena', arenaSchema)

@@ -12,21 +12,61 @@
   <div class="container" ng-controller="mainController as main">
     Logged in user: {{ main.currentUser.username }}
     <div ui-view></div>
+    <div>
+        <script type="text/ng-template" id="myModalContent.html">
+            <div class="modal-header">
+              <div class="row">
+                <div class="col-sm-6">
+                  <img src="/images/arenas/{{selectedArena.image}}" class="modal-image">
+                  <h3 class="modal-title">{{ selectedArena.arena }}</h3>
+                </div>
+                <div class="col-sm-6">
+                  <img src="/images/{{selectedArena.teamLogo}}" class="modal-image">
+                  <h3 class="modal-title">{{ selectedArena.team }}</h3>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-body">
+              <div class=row>
+                <div class="col-sm-6">
+                  <ul>
+                      <li>{{ selectedArena.location}}</li>
+                      <li>Capacity: {{ selectedArena.capacity}}</li>
+                      <li>Year Opened: {{ selectedArena.opened}}</li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <ul>
+                    <li><a ng-href="http://{{selectedArena.teamId}}.nhl.com ">{{ selectedArena.team }} Website</a></li>
+                    <li><a ng-href="http://{{selectedArena.teamId}}.nhl.com/club/schedule.htm">{{ selectedArena.team }} Schedule</a></li>
+                    <li><a ng-href="http://{{selectedArena.teamId}}.nhl.com/club/roster.htm">{{ selectedArena.team }} Roster</a></li>
+                  </ul>
+                </div>
+              </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning" type="button" ng-click="close()">Close</button>
+            </div>
+        </script>
+        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+    </div>
   </div>
 
-  <!-- scripts -->
-  <!-- <script src="//code.jquery.com/jquery-2.2.1.min.js"></script> -->
-  <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-
-  <!-- <img src="/images/arenas/Amalie-Arena.jpg"> -->
-
-  <!-- <li ng-repeat="arena in ac.arenas"><img src="/images/arenas/{{ arena.image }}"></li> -->
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+
+  <!-- Bootstrap scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.0.js"></script>
+
   <script src="./main.js"></script>
   <script src="./services.js"></script>
   <script src="./controllers.js"></script>
+
+
+
+
+
 
 </body>
 </html>

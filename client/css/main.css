@@ -12,3 +12,20 @@
   height: 100px;
   width: 100px;
 }
+
+.thumbnail-center {
+  padding-top: 15px;
+}
+
+.arena-list {
+  margin-bottom: 10px;
+}
+
+.modal-image {
+  height: 250px;
+  width: 250px;
+}
+
+.modal-tital {
+  text-align: center; 
+}

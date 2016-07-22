@@ -4,17 +4,74 @@ angular.module('myApp')
   .controller('logoutController', logoutController)
   .controller('registerController', registerController)
   .controller('arenaController', arenaController)
+  .controller('ModalInstanceCtrl', ModalInstanceCtrl)
+  // .controller('ModalDemoCtrl', ModalDemoCtrl)
 
 
-  mainController.$inject = ['$rootScope', '$state', 'AuthService']
+  mainController.$inject = ['$scope', '$rootScope', '$state', '$uibModal', 'AuthService']
   loginController.$inject = ['$state', 'AuthService']
   logoutController.$inject = ['$state', 'AuthService']
   registerController.$inject = ['$state', 'AuthService']
-  arenaController.$inject = ['$state', 'AuthService', '$http']
+  arenaController.$inject = ['$state', 'AuthService', '$http', '$scope']
+  // ModalDemoCtrl.$inject = ['$scope', '$uibModal', '$log']
+  ModalInstanceCtrl.$inject = ['$scope', '$uibModal']
+
+// function ModalDemoCtrl($scope, $uibModal, $log) {
+//   var vm = this
+//   vm.animationsEnabled = true;
+//
+//   vm.open = function (size) {
+//
+//     console.log("Clicked...")
+//
+//     var modalInstance = $uibModal.open({
+//       animation: true,
+//       templateUrl: 'myModalContent.html',
+//       controller: 'ModalInstanceCtrl',
+//       size: size,
+//       resolve: {
+//         items: function () {
+//           return $scope.items;
+//         }
+//       }
+//     });
+//
+//     modalInstance.result.then(function (selectedItem) {
+//       $scope.selected = selectedItem;
+//     }, function () {
+//       $log.info('Modal dismissed at: ' + new Date());
+//     });
+//   };
+//
+//   vm.toggleAnimation = function () {
+//     $scope.animationsEnabled = !$scope.animationsEnabled;
+//   };
+// };
+
+// Please note that $uibModalInstance represents a modal window (instance) dependency.
+// It is not the same as the $uibModal service used above.
+
+function ModalInstanceCtrl ($scope, $uibModalInstance, selectedArena) {
+
+  $scope.selectedArena = JSON.parse(localStorage.selectedArena);
+  console.log("Selected Arena From Modal Instance Ctrl:")
+  console.log($scope.selectedArena)
+  // $scope.selected = {
+  //   item: $scope.items[0]
+  // };
+  $scope.ok = function () {
+    $uibModalInstance.close($scope.selected.item);
+  };
+  $scope.close = function () {
+    $uibModalInstance.dismiss('close');
+  };
+};
 
 
-function arenaController($state, AuthService, $http) {
+function arenaController($state, AuthService, $http, $scope) {
   var vm = this
+  var currentUser = $scope.$parent.main.currentUser
+  console.log($scope)
   vm.title = "the Arena Ctrl"
     $http.get('/user/arenas')
     .success(function (arenas) {
@@ -25,12 +82,26 @@ function arenaController($state, AuthService, $http) {
     console.log("lets add arena");
     console.log(arena);
     // use $http to post arena to user
-    
+    $http.post('/user/' + currentUser._id + '/add-arena', {arenaId: arena._id})
+    .success(function (response) {
+      console.log(response);
+      $scope.$parent.main.currentUser = response.user
+    })
+  }
+
+  vm.makeUrl = function(name) {
+    return 'http://' + name + 'nhl.com'
+  }
+
+  vm.selectArena = function(arena) {
+    $scope.$parent.main.selectedArena = arena
+    localStorage.selectedArena = JSON.stringify(arena)
   }
 }
 
-function mainController($rootScope, $state, AuthService) {
+function mainController($scope, $rootScope, $state, $uibModal, AuthService) {
   var vm = this
+  vm.testString = "Testing 123"
 
   $rootScope.$on('$stateChangeStart', function (event) {
     // console.log("Changing states")
@@ -39,6 +110,33 @@ function mainController($rootScope, $state, AuthService) {
         vm.currentUser = data.data.user
       })
   })
+
+
+
+  // MODAL STUFF:
+  vm.open = function () {
+    console.log("Clicked...")
+    console.log("Selected Arena:", vm.selectedArena);
+
+    vm.modalInstance = $uibModal.open({
+      animation: true,
+      templateUrl: 'myModalContent.html',
+      controller: 'ModalInstanceCtrl',
+      // bindToController: true,
+      resolve: {
+        selectedArena: function () {
+          return vm.selectedArena;
+        }
+      }
+    });
+
+    vm.modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+
 }
 
 // LOGIN CONTROLLER:
@@ -55,6 +153,9 @@ function loginController($state, AuthService) {
       // handle success
       .then(function () {
         console.log("Successful login...")
+
+        // set up a route on the backend, like '/user/get-full-user', that simply searches the database for the currently logged in user, populates the arenas array and res.json() with that populated user.
+        // then, set vm.currentUser here to the response you get back.
         $state.go('home')
         vm.disabled = false
         vm.loginForm = {}
